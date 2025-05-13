@@ -19,5 +19,7 @@ extension Point: Equatable {
 let a = Point(x: 3, y: 4, label: "a")
 let b = Point(x: 3, y: 4, label: "b")
 let abEqual = (a == b)
+let abNotEqual = (a != b)
 
 print(abEqual) // true
+print(abNotEqual) // false
