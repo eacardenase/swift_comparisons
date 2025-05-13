@@ -35,3 +35,7 @@ let cLessThanD = (c < d)
 
 print(cdEqual) // false
 print(cLessThanD) // true
+
+let cLessThanEqual = (c <= d)
+let cGreaterThan = (c > d)
+let cGreaterThanEqual = (c >= d)
