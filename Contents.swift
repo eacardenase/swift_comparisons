@@ -39,3 +39,7 @@ print(cLessThanD) // true
 let cLessThanEqual = (c <= d)
 let cGreaterThan = (c > d)
 let cGreaterThanEqual = (c >= d)
+
+let pointRange = c..<d
+pointRange.contains(a)
+pointRange.contains(Point(x: -1, y: -1))
