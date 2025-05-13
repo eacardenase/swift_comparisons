@@ -65,3 +65,25 @@ let pointNames: [Point:String] = [
     Point(x: 0, y: 0): "origin",
     a: "a",
 ]
+
+class Person {
+    let name: String
+    let age: Int
+    
+    init(name: String, age: Int) {
+        self.name = name
+        self.age = age
+    }
+}
+
+extension Person: Equatable {
+    static func ==(lhs: Person, rhs: Person) -> Bool {
+        return (lhs.name == rhs.name) && (lhs.age == rhs.age)
+    }
+}
+
+let p1 = Person(name: "Edwin", age: 29)
+let p2 = Person(name: "Keyla", age: 30)
+let people = [p1, p2]
+
+let p1Index = people.firstIndex(of: p1) // 0
