@@ -23,12 +23,21 @@ extension Point: Comparable, Hashable {
         hasher.combine(x)
         hasher.combine(y)
     }
+    
+    static func +(lhs: Point, rhs: Point) -> Point {
+        let x = lhs.x + rhs.x
+        let y = lhs.y + rhs.y
+        return Point(x: x, y: y)
+    }
 }
 
 let a = Point(x: 3, y: 4, label: "a")
 let b = Point(x: 3, y: 4, label: "b")
 let abEqual = (a == b)
 let abNotEqual = (a != b)
+
+let aPlusB = a + b
+print(aPlusB)
 
 print(abEqual) // true
 print(abNotEqual) // false
